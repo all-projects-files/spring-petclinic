@@ -25,5 +25,10 @@ pipeline {
                 junit '**/surefire-reports/*.xml'
             }
         }
+        stage('reports') {
+            steps {
+                jacoco()
+            }
+        }
     }
 }
